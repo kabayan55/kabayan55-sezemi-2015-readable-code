@@ -8,13 +8,16 @@ import os
 # Data is defined HERE
 three_recipes={1:'オムライス',2:'親子丼',3:'杏仁豆腐'}
 
+def printRecipe(recipe_id, recipe_name):
+  print str(recipe_id)+': '+ recipe_name
+
 def searchRecipeById(recipe_id):
   searched_recipe_name = three_recipes[recipe_id]
-  print str(recipe_id)+': '+ searched_recipe_name
+  printRecipe(recipe_id, searched_recipe_name)
 
 def printAllRecipes():
   for recipe_id, recipe_name in three_recipes.items():
-    print str(recipe_id)+': '+ recipe_name
+    printRecipe(recipe_id, recipe_name)
 
 if len(sys.argv) == 2:
   # Case: ID is given
