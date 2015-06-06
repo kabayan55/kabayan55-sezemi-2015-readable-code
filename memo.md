@@ -33,6 +33,8 @@ three_recipes2txtfile.write('杏仁豆腐'+'\n')
 
 ## 引き継ぎ後 (id: takuti)
 
+引き継ぎ後の気付き↓
+
 ### 1
 
 #### 実装
@@ -88,3 +90,41 @@ three_recipes2txtfile.write(str(recipe_key)+': '+ recipe_name +'\n')
 #### 気づいたきっかけ
 
 元データがどのように扱われているのか考えた時に、すぐに id(int) と recipe(string) の辞書ということがわかった。
+
+---
+
+## 継続した実装 (id: takuti)
+
+### 1
+
+#### 実際のコード
+
+https://github.com/takuti/kabayan55-sezemi-2015-readable-code/blob/3e3967e9fd46d03a2d9236897235bc371a1908b1/recipe.py
+
+#### どうしてリーダブルだと思っているかの説明
+
+関数名が自己説明的
+
+- searchRecipeById
+- printAllRecipes
+
+#### 一言説明
+
+自己説明的関数名
+
+### 2
+
+#### 実際のコード
+
+同上
+
+#### どうしてリーダブルだと思っているのかの説明
+
+実行時引数によって挙動を変えているが、各挙動で変数名がしっかりと対応している。
+
+- `searched_recipe_name` in searchRecipeById
+- `recipe_name` in printAllRecipes
+
+#### 一言説明
+
+分岐対応命名
