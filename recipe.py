@@ -13,8 +13,8 @@ def searchRecipeById(recipe_id):
   print str(recipe_id)+': '+ searched_recipe_name
 
 def printAllRecipes():
-  for recipe_key, recipe_name in three_recipes.items():
-    print str(recipe_key)+': '+ recipe_name
+  for recipe_id, recipe_name in three_recipes.items():
+    print str(recipe_id)+': '+ recipe_name
 
 if len(sys.argv) == 2:
   # Case: ID is given
