@@ -2,7 +2,18 @@
 * Python
 
 ## 実行手順
-* python recipe.py
+
+全レシピ表示
+
+```
+$ python recipe.py
+```
+
+特定IDのレシピ検索
+
+```
+$ python recipe.py ${recipe_id}
+```
 
 ## 入力データフォーマット
 
