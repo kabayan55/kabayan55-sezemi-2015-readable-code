@@ -128,3 +128,30 @@ https://github.com/takuti/kabayan55-sezemi-2015-readable-code/blob/3e3967e9fd46d
 #### 一言説明
 
 分岐対応命名
+
+### 3
+
+#### 実際のコード
+
+https://github.com/takuti/kabayan55-sezemi-2015-readable-code/blob/3d2f3913fd6b8ac9e6efcb6dd65f7590e342e479/recipe.py
+
+#### どうしてリーダブルだと思っているのかの説明
+
+共通部分は括りだして、同じ処理をしている関数内の見通しをよくした。
+
+```python
+def printRecipe(recipe_id, recipe_name):
+  print str(recipe_id)+': '+ recipe_name
+
+def searchRecipeById(recipe_id):
+  searched_recipe_name = three_recipes[recipe_id]
+  printRecipe(recipe_id, searched_recipe_name)
+
+def printAllRecipes():
+  for recipe_id, recipe_name in three_recipes.items():
+    printRecipe(recipe_id, recipe_name)
+```
+
+#### 一言説明
+
+共通処理のくくりだし
