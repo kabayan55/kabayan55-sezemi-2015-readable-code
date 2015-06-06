@@ -155,3 +155,27 @@ def printAllRecipes():
 #### 一言説明
 
 共通処理のくくりだし
+
+### 4
+
+#### 実際のコード
+
+https://github.com/takuti/kabayan55-sezemi-2015-readable-code/blob/f03eaa4005dc19067ec4b1dc8e31d05aa17498e0/recipe.py
+
+#### どうしてリーダブルだと思っているのかの説明
+
+データを辞書で定義しているが、URLというパラメータが増えてごちゃごちゃしてきたのでスペースを適宜いれて見やすく揃えた。
+
+```python
+three_recipes={
+    1:('オムライス', 'http://cookpad.com/recipe/2653946'),
+    2:('親子丼',     'http://cookpad.com/recipe/2657882'),
+    3:('杏仁豆腐',   'http://cookpad.com/recipe/2654398')
+  }
+```
+
+また、レシピ名とURLを（リストや辞書ではなく）タプルとして持たせることで、この **2つ** がレシピの情報であることをクリアに伝えた。
+
+#### 一言説明
+
+整列された辞書定義
